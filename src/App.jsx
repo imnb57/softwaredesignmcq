@@ -201,7 +201,7 @@ const QuizApp = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 sm:space-y-6 p-4 sm:p-6">
-              <div className="grid gap-3 sm:gap-4">
+              <div className="grid gap-3 sm:gap-4 max-h-[400px] overflow-y-auto">
                 {currentQ.options.map((option, index) => (
                   <button
                     key={index}
@@ -250,7 +250,7 @@ const QuizApp = () => {
           </Card>
         </div>
   
-       
+        {/* Mobile Navigation Buttons */}
         <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-10 flex justify-between">
           <button
             onClick={handlePrevQuestion}
@@ -266,14 +266,13 @@ const QuizApp = () => {
           </button>
         </div>
   
-     
+        {/* Desktop Question Jumper */}
         <div className="hidden lg:block">
           <QuestionJumper />
         </div>
       </div>
     );
   };
-  
   
 
   const ResultScreen = () => (
